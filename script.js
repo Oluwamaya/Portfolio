@@ -41,7 +41,13 @@ function SendMessage  (ev)  {
 ev.preventDefault()
 
   if (username.value === "" || email.value === "" || subject.value === "" || description.value === "") {
-    alert("input fields cannot be empty")
+    // alert("input fields cannot be empty")
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "input fields cannot be empty",
+      footer: '<a href="#">Why do I have this issue?</a>'
+    });
     
   }else{
     const value = {
@@ -61,7 +67,19 @@ ev.preventDefault()
       return res.json()
     }).then((data) => {
       console.log(data);
-      alert("Thank you for exploring! I look forward to working with you!");
+      
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Thank you for exploring! I look forward to working with you!",
+        showConfirmButton: false,
+        timer: 2500
+      });
+
+      username.value = ""
+      email.value = ""
+      subject.value = ""
+      description.value = ""
     }).catch((error)=>{
      console.log(error);
     })
