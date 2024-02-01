@@ -8,29 +8,13 @@
 html{
     scroll-behavior: smooth;
 }
-.navbar{
-    background:linear-gradient( rgb(102, 164, 186),rgb(167, 161, 127));
-    width: 100%;
-    padding: 20px 0;
-    z-index: 999;
-    position: fixed !important;
-    top:0;
-    font-family: 'Ubuntu', sans-serif !important;
-    transition: all 0.3s ease;
-}
-.navbar.sticky{
-    padding: 15px 0;
-    /* background: linear-gradient( blue,gold); */
-    background:linear-gradient( rgb(102, 164, 186),rgb(167, 161, 127));
-   
-    /* display: flex; */
-    /* justify-content: space-between; */
 
-}
-.navbar .logo a{
+
+.haity{
     text-decoration: none;
     font-size: 35px;
-    font-weight: 600;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgb(41, 156, 198);
     color: #fff;
     margin-right: 140px;
     /* margin-left: 30px !important; */
@@ -49,17 +33,53 @@ html{
 .navbar .logo a span{
     color: rgb(18,61,192);
 }
+.sect{
+    background:linear-gradient( rgb(102, 164, 186),rgb(167, 161, 127)) !important;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    /* height: 1px !important; */
+}
+.dropi:focus-within .downi{
+    display: block;
+}
+.downi{
+    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    /* background: red; */
+    width: 100% !important;
+    background:linear-gradient( rgb(102, 164, 186),rgb(167, 161, 127)) !important ;
 
-.nav-link{
+
+}
+.faint{
+    background:linear-gradient( rgb(102, 164, 186),rgb(167, 161, 127)) !important ;
+    width: 100%;
+    z-index: 1;
+
+    /* background-color: linear-gradient(rgb(102, 164, 186),rgb(167, 161, 127)) !important ; */
+}
+
+.femit{
     color: white !important;
-
+        list-style: none;
     display: block;
     /* color: #fff; */
     font-size: 18px !important;
     font-weight: 500 !important;
-    margin-left: 25px;
+    /* margin-left: 25px; */
     transition: color 0.3s ease !important;
     text-decoration: none !important;
+}
+.femit a{
+    text-decoration: none;
+    color: whitesmoke !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
 }
 .bonju{
     /* display: flex !important; */
